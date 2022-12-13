@@ -1,7 +1,7 @@
 # Import required modules
 import sys
 
-# Define basic shapes
+# some basic shapes
 shapes = {
     "box": "<box size='1 1 1'/>",
     "sphere": "<sphere radius='0.5'/>",
@@ -11,10 +11,10 @@ shapes = {
 # Prompt user for robot name
 robot_name = input("Enter robot name: ")
 
-#Create the .urdf file
+# Create  .urdf file
 urdf_file = open(robot_name + ".urdf", "w")
 
-# Write the header information for the .urdf file
+# Write header information for the .urdf file
 urdf_file.write("<?xml version=\"1.0\"?>\n")
 urdf_file.write("<robot name=\"" + robot_name + "\">\n")
 
