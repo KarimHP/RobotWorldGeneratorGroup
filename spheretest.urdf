@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<robot name="boxtest">
-<link name="box_one">
+<robot name="spheretest">
+<link name="sphere_one">
 <visual>
 <geometry>
-<box size ="2 2 2"/>
+<sphere radius ="1"/>
 </geometry>
 <material>
 <color rgba="1 0 0 ">

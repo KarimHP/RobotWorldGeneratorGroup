@@ -32,7 +32,14 @@ while True:
     #depending if its a box, a cylinder or a sphere enter size/radius,length/radius
     if shape == "box":
         size = input("Enter the size of the box (eg: 1 1 1): ")
-        shapes[shape] = "<box size =\"" + size + "\"/>" 
+        shapes[shape] = "<box size =\"" + size + "\"/>"
+    elif shape == "sphere":
+        radius = input("Enter the radius of the sphere (eg: 0.5): ")
+        shapes[shape] = "<sphere radius =\"" + radius + "\"/>"
+    elif shape == "cylinder":
+        radius = input("Enter the radius of the cylinder: ")
+        length = input("Enter the length of the cylinder: ")
+        shapes[shape] = "<cylinder radius =" + "'" + radius + "' "+" length=" + "'" + length + "'" "/>"
 
     # Prompt user for link color
     color = input("Enter color (e.g. 1 0 0 for red): ")
