@@ -29,6 +29,11 @@ while True:
         print("Invalid shape. Please try again.")
         continue
 
+    #depending if its a box, a cylinder or a sphere enter size/radius,length/radius
+    if shape == "box":
+        size = input("Enter the size of the box (eg: 1 1 1): ")
+        shapes[shape] = "<box size =\"" + size + "\"/>" 
+
     # Prompt user for link color
     color = input("Enter color (e.g. 1 0 0 for red): ")
 

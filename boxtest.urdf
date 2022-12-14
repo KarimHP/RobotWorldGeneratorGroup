@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
-<robot name="testshape">
+<robot name="boxtest">
 <link name="box_one">
 <visual>
 <geometry>
-<box size='1 1 1'/>
+<box size ="2 2 2"/>
 </geometry>
 <material>
-<color rgba="1 0 0 ">
+<color rgba="1 0 0">
 </material>
 </visual>
 </link>

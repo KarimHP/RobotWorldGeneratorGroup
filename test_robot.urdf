@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot name="test_robot">
+<link name="box_one ">
+<visual>
+<geometry>
+<box size='1 1 1'/>
+</geometry>
+<material>
+<color rgba="1 0 0 ">
+</material>
+</visual>
+</link>
+ </robot>
