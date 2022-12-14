@@ -8,6 +8,9 @@ shapes = {
     "cylinder": "<cylinder radius='0.5' length='1'/>"
 }
 
+#standard origins
+origins = "<origin rpy = '0 0 0' xyz = '0 0 0'/>"
+
 # Prompt user for robot name
 robot_name = input("Enter robot name: ")
 
@@ -41,8 +44,14 @@ while True:
         length = input("Enter the length of the cylinder: ")
         shapes[shape] = "<cylinder radius =" + "'" + radius + "' "+" length=" + "'" + length + "'" "/>"
 
+
     # Prompt user for link color
     color = input("Enter color (e.g. 1 0 0 for red): ")
+
+    # Prompt user for xyz and rpy
+    xyz = input("Enter the xyz data (eg: 0 0 0.5): ")
+    rpy = input("Enter the rpy data (eg: 0 0 0): ")
+    origins = "<origin rpy =" + "'" + rpy + "' "+ "xyz=" + "'" + xyz + "'" + "/>"
 
     # Add link to .urdf file
     urdf_file.write("<link name=\"" + link_name + "\">\n")
@@ -50,6 +59,7 @@ while True:
     urdf_file.write("<geometry>\n")
     urdf_file.write(shapes[shape] + "\n")
     urdf_file.write("</geometry>\n")
+    urdf_file.write(origins)
     urdf_file.write ("<material>\n")
     urdf_file.write("<color rgba=\"" + color + "\">\n")
     urdf_file.write("</material>\n")

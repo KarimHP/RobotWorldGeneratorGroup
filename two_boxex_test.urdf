@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<robot name="two_boxex_test">
+
+<link name="box_two">
+<visual>
+<geometry>
+<box size ="1 1 1"/>
+</geometry>
+<origin rpy ='0 0 0' xyz='0 0 0'/><material>
+<color rgba="15 10 222">
+</material>
+</visual>
+</link>
+
+<link name="box_one">
+<visual>
+<geometry>
+<box size ="1 1 1"/>
+</geometry>
+<origin rpy ='1 1 1' xyz='1 1 1'/><material>
+<color rgba="1 0 0">
+</material>
+</visual>
+</link>
+
+
+
+ </robot>
