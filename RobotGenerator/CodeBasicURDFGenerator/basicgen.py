@@ -80,11 +80,12 @@ while True:
     origins = "<origin rpy =" + "'" + rpy + "' "+ "xyz=" + "'" + xyz + "'" + "/>"
 
     # Add the material section to the .urdf file 
-    urdf_file.write("<material name =" + "'" + color +"'" + ">")
-    urdf_file.write("   <color rgba=" + "'" + colors[colorcounter] + "'" + "/>")
-    urdf_file.write("</material>")
+    urdf_file.write("<material name =" + "'" + color +"'" + ">\n")
+    urdf_file.write("   <color rgba=" + "'" + colors[colorcounter] + "'" + "/>\n")
+    urdf_file.write("</material>\n")
 
     # Add link to .urdf file
+    urdf_file.write("\n")
     urdf_file.write("<link name=\"" + link_name + "\">\n")
     urdf_file.write("<visual>\n")
     urdf_file.write("<geometry>\n")
@@ -94,6 +95,7 @@ while True:
     urdf_file.write("<material name =" + "'" + color + "'" + "/>")
     urdf_file.write("</visual>\n")
     urdf_file.write("</link>\n")
+    urdf_file.write("\n")
 
     # Prompt user to add another link
     add_link = input("Add another link? (y/n) ")
