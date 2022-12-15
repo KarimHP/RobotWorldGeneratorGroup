@@ -8,6 +8,16 @@ shapes = {
     "cylinder": "<cylinder radius='0.5' length='1'/>"
 }
 
+# Define the colors Array and the Color_map which appends the correct rgba code to the given color
+colors = []
+color_map = {
+    "red": "1 0 0",
+    "green": "0 1 0",
+    "blue": "0 0 1",
+    "white": "1 1 1",
+    "black": "0 0 0"
+}
+
 #standard origins
 origins = "<origin rpy = '0 0 0' xyz = '0 0 0'/>"
 
@@ -21,8 +31,15 @@ urdf_file = open(robot_name + ".urdf", "w")
 urdf_file.write("<?xml version=\"1.0\"?>\n")
 urdf_file.write("<robot name=\"" + robot_name + "\">\n")
 
+
+ # Add a color counter so that we later know which link is which color
+colorcounter = 0; 
+
 # Loop until user is finished adding links
 while True:
+
+   
+
     # Prompt user for link name and shape
     link_name = input("Enter link name: ")
     shape = input("Enter shape (box, sphere, cylinder): ")
@@ -46,12 +63,26 @@ while True:
 
 
     # Prompt user for link color
-    color = input("Enter color (e.g. 1 0 0 for red): ")
+    color = input("Enter color (e.g 'red' or 'blue'): ")
+    rgba = color_map.get(color)
+    if rgba is None:
+        print("Invalid color")
+        continue
+
+    
+    # Add the rgba value to the colors array
+    colors.append(rgba)
+    print (colors[colorcounter])
 
     # Prompt user for xyz and rpy
     xyz = input("Enter the xyz data (eg: 0 0 0.5): ")
     rpy = input("Enter the rpy data (eg: 0 0 0): ")
     origins = "<origin rpy =" + "'" + rpy + "' "+ "xyz=" + "'" + xyz + "'" + "/>"
+
+    # Add the material section to the .urdf file 
+    urdf_file.write("<material name =" + "'" + color +"'" + ">")
+    urdf_file.write("   <color rgba=" + "'" + colors[colorcounter] + "'" + "/>")
+    urdf_file.write("</material>")
 
     # Add link to .urdf file
     urdf_file.write("<link name=\"" + link_name + "\">\n")
@@ -60,9 +91,7 @@ while True:
     urdf_file.write(shapes[shape] + "\n")
     urdf_file.write("</geometry>\n")
     urdf_file.write(origins + "\n")
-    urdf_file.write ("<material>\n")
-    urdf_file.write("<color rgba=\"" + color + "\"/>\n")
-    urdf_file.write("</material>\n")
+    urdf_file.write("<material name =" + "'" + color + "'" + "/>")
     urdf_file.write("</visual>\n")
     urdf_file.write("</link>\n")
 
@@ -70,6 +99,10 @@ while True:
     add_link = input("Add another link? (y/n) ")
     if add_link.lower() != "y":
         break
+    else: 
+        colorcounter = colorcounter + 1 
+        print(colorcounter)
+        
 
 # Check if user wants to add a joint between the links
 add_joint = input("Add a joint between the links? (y/n) ")

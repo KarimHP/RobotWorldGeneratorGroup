@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<robot name="colortest">
+<material name ='blue'>   <color rgba='0 0 1'/></material><link name="base_link">
+<visual>
+<geometry>
+<box size ="1 1 1"/>
+</geometry>
+<origin rpy ='0 0 0' xyz='0 0 0'/>
+<material name ='blue'/></visual>
+</link>
+<material name ='red'>   <color rgba='1 0 0'/></material><link name="box_one">
+<visual>
+<geometry>
+<box size ="1 1 1"/>
+</geometry>
+<origin rpy ='0 0 1' xyz='1 1 1'/>
+<material name ='red'/></visual>
+</link>
+ </robot>
