@@ -59,9 +59,9 @@ while True:
     urdf_file.write("<geometry>\n")
     urdf_file.write(shapes[shape] + "\n")
     urdf_file.write("</geometry>\n")
-    urdf_file.write(origins)
+    urdf_file.write(origins + "\n")
     urdf_file.write ("<material>\n")
-    urdf_file.write("<color rgba=\"" + color + "\">\n")
+    urdf_file.write("<color rgba=\"" + color + "\"/>\n")
     urdf_file.write("</material>\n")
     urdf_file.write("</visual>\n")
     urdf_file.write("</link>\n")
@@ -86,3 +86,6 @@ if add_joint.lower() == "y":
 
 #write the closing tag for the <robot>
 urdf_file.write(" </robot>\n")
+
+
+#TODO: Add xml validator

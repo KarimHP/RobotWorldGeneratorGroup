@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<robot name="two_boxes_test">
+
+
+<link name="base_link">
+<visual>
+<geometry>
+<box size ="1 1 1"/>
+</geometry>
+<material>
+<color rgba="15 10 222"/>
+</material>
+</visual>
+</link>
+
+<link name="box_one">
+<visual>
+<geometry>
+<box size ="1 1 1"/>
+</geometry>
+<origin rpy ='1 1 1' xyz='2 2 2'/>
+<material>
+<color rgba="1 0 0"/>
+</material>
+</visual>
+</link>
+
+
+
+<joint name="base_to_right_leg" type="fixed">
+       <parent link="base_link"/>
+       <child link="box_one"/>
+        <origin xyz="0 -0.22 0.25"/>
+</joint>
+
+
+
+ </robot>
+
+  
