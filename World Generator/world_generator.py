@@ -39,7 +39,6 @@ class WorldGenerator:
         self.robot_id = p.loadURDF(robot_urdf, self.getPosition(robot), self.getRotation(robot))
 
     def load_obstacles(self):
-        
         obstacles = self.config["obstacles"]
         for obstacle in obstacles:
             params = obstacle["params"]
@@ -61,7 +60,6 @@ class WorldGenerator:
         p.removeAllUserDebugItems()
         for sensor in self.sensors:
             sensor.update()
-            sensor._set_lidar_cylinder(render=True)
         p.stepSimulation()
 
 

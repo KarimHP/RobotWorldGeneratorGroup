@@ -15,12 +15,15 @@ class LidarSensor:
         self.link_idx = link_idx
         self.pos = pos
         self.orn = orn
+        # How to use this stuff???
+        # #p.setCollisionFilterGroupMask(robot_id, link_idx, 0b001)
 
     def update(self):
         link_state = p.getLinkState(self.robot_id, self.link_idx)
         new_transform = p.multiplyTransforms(link_state[0], link_state[1], self.pos, self.orn)
         self.current_pos = new_transform[0]
         self.current_orn = new_transform[1]
+        self._set_lidar_cylinder(render=True)
 
     def quaternion_matrix(self, quaternion):
         """Return homogeneous rotation matrix from quaternion.
