@@ -50,11 +50,11 @@ class WorldGenerator:
 
 
     def update(self):
-        p.stepSimulation()
-        print(p.getBodyInfo(self.robot_id))
+        p.removeAllUserDebugItems()
         for sensor in self.sensors:
             sensor.update()
             sensor._set_lidar_cylinder(render=True, ray_num_hor=1, ray_num_ver=1)
+        p.stepSimulation()
 
 
     def __init__(self) -> None:

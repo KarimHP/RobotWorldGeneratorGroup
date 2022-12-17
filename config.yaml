@@ -12,12 +12,12 @@ world:
       p: 0
       y: 0
     sensors:
-      - type: "rgb"
-        link: 0
+      - type: "lidar"
+        link: 6
         position:
-          x: 0
+          x: .025
           y: 0
-          z: 0
+          z: .1
         rotation:
           r: 0
           p: 0
@@ -27,17 +27,17 @@ world:
         position:
           x: 0
           y: 0
-          z: .2
+          z: .1
         rotation:
           r: 0
-          p: .5
+          p: 0
           y: 0
   obstacles:
     - type: "cube"
       position:
         x: 0
         y: 2
-        z: 1
+        z: .5
       rotation:
         r: 0
         p: 0

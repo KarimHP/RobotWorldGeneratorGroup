@@ -91,8 +91,6 @@ class LidarSensor:
             hitRayColor = [0, 1, 0]
             missRayColor = [1, 0, 0]
 
-            p.removeAllUserDebugItems()
-
             for index, result in enumerate(results):
                 if result[0] == -1:
                     p.addUserDebugLine(ray_froms[index], ray_tops[index], missRayColor)
