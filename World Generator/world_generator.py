@@ -4,6 +4,7 @@ import os
 import glob
 import sys
 import yaml
+from obstacles.maze_obstacle import MazeObstacle
 from sensors.lidar import LidarSensor
 
 class WorldGenerator:
@@ -38,22 +39,29 @@ class WorldGenerator:
         self.robot_id = p.loadURDF(robot_urdf, self.getPosition(robot), self.getRotation(robot))
 
     def load_obstacles(self):
+        
         obstacles = self.config["obstacles"]
         for obstacle in obstacles:
-            p.loadURDF(f"{obstacle['type']}.urdf", self.getPosition(obstacle), self.getRotation(obstacle))
+            params = obstacle["params"]
+            if obstacle["type"] == "maze":
+                maze = MazeObstacle()
+                maze.generate(self.getPosition(obstacle), self.getRotation(obstacle), params["width"], params["height"], params["unit_size"], params["wall_height"], params["wall_width"])
+            else:
+                p.loadURDF(f"{obstacle['type']}.urdf", self.getPosition(obstacle), self.getRotation(obstacle))
 
     def load_sensors(self):
         sensors = self.config["robot"]["sensors"]
         for sensor in sensors:
+            params = sensor["params"]
             if sensor["type"] == "lidar":
-                self.sensors.append(LidarSensor(self.robot_id, sensor["link"], self.getPosition(sensor), self.getRotation(sensor)))
+                self.sensors.append(LidarSensor(self.robot_id, sensor["link"], self.getPosition(sensor), self.getRotation(sensor), params["ray_min"], params["ray_max"], params["ray_num_ver"], params["ray_num_hor"]))
 
 
     def update(self):
         p.removeAllUserDebugItems()
         for sensor in self.sensors:
             sensor.update()
-            sensor._set_lidar_cylinder(render=True, ray_num_hor=1, ray_num_ver=1)
+            sensor._set_lidar_cylinder(render=True)
         p.stepSimulation()
 
 
