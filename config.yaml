@@ -1,0 +1,44 @@
+robot:
+  hint: "ToDo for robot generator part"
+world:
+  robot:
+    type: "kuka_kr210_support"
+    position:
+      x: 0
+      y: 0
+      z: 0
+    rotation:
+      r: 0
+      p: 0
+      y: 0
+    sensors:
+      - type: "rgb"
+        link: 0
+        position:
+          x: 0
+          y: 0
+          z: 0
+        rotation:
+          r: 0
+          p: 0
+          y: 0
+      - type: "lidar"
+        link: 3
+        position:
+          x: 0
+          y: 0
+          z: .2
+        rotation:
+          r: 0
+          p: .5
+          y: 0
+  obstacles:
+    - type: "cube"
+      position:
+        x: 0
+        y: 2
+        z: 1
+      rotation:
+        r: 0
+        p: 0
+        y: 0

@@ -1,0 +1,3 @@
+• Load different types of existing robots
+• Add virtual sensors to the models
+• Add obstacles (ie. generated maze)
