@@ -67,7 +67,7 @@ while True:
 
     # Add the rgba value to the colors array
     colors.append(rgba)
-    print(colors[colorcounter])
+    
 
     # Prompt user for xyz and rpy
     xyz = input("Enter the xyz data (eg: 0 0 0.5): ")
@@ -98,7 +98,7 @@ while True:
         break
     else:
         colorcounter = colorcounter + 1
-        print(colorcounter)
+        
 
 while True:
     # Check if user wants to add a joint between the links
