@@ -134,7 +134,7 @@ while True:
             joint_axis = f"<axis xyz=\"{axis}\"/>"
             joint_options = f"{joint_axis}\n"
         elif joint_type == "fixed":
-            joint_options = ""
+            joint_options = f"<origin xyz=\"{origin_xyz}\" rpy=\"{origin_rpy}\"/>"
         elif joint_type == "floating":
             limits = input("Enter limits (lower, upper, effort, velocity): ") or "0 0 1 1"
             limits_list = str.split(limits, " ")
