@@ -49,15 +49,11 @@ robot:
   joint_list:
   - joint_name: base_to_left_leg
     type: fixed
-    axis: 0 0 0
-    limits: 0 0 0 
     link1: base_link
-    link2: right_leg
-    origin: 0 -0.22 0.25 0 0
+    link2: left_leg
+    origin: 0 -0.22 0.25 0 0 0
   - joint_name: base_to_right_leg
     type: fixed
-    axis: 0 0 0
-    limits: 0 0 0 
     link1: base_link
     link2: right_leg
-    origin: 0 0.22 0.25 0 0 
+    origin: 0 0.22 0.25 0 0 0
