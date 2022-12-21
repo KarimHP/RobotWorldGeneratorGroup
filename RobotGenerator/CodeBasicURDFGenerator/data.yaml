@@ -1,0 +1,27 @@
+robot:
+  robot_name: ytest
+  joint_list:
+  - joint_name: j1
+    type: revolute
+    axis: 1 0 0
+    limits: 0 0 1 1
+    link1: l1
+    link2: l2
+    origin: 0 0 0 0 0 0
+  - joint_name: j2
+    type: revolute
+    axis: 1 0 0
+    limits: 0 0 1 1
+    link1: l1
+    link2: l2
+    origin: 0 0 0 0 0 0
+  - joint_name: j3
+    link1: l2
+    link2: l3
+    type: fixed
+    origin: 0 0 0 0 0 0
+  - joint_name: j4
+    link1: l2
+    link2: l1
+    type: fixed
+    origin: 0 0 0 0 0 0
