@@ -1,7 +1,7 @@
 import yaml
 
 if __name__ == '__main__':
-    with open("data.yaml", 'r') as stream:
+    with open("RobotGenerator/CodeBasicURDFGenerator/data.yaml", 'r') as stream:
         config = yaml.safe_load(stream)
 
     robot_name = config["robot"]["robot_name"]

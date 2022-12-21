@@ -1,5 +1,6 @@
 # Import required modules
 import sys
+import yaml
 
 # some basic shapes
 shapes = {
@@ -21,8 +22,12 @@ color_map = {
 # standard origins
 origins = "<origin rpy = '0 0 0' xyz = '0 0 0'/>"
 
-# Prompt user for robot name
-robot_name = input("Enter robot name: ")
+# Open the config.yaml file
+with open("RobotGenerator/CodeBasicURDFGenerator/data.yaml", "r") as stream:
+    # Load the yaml file into a dictionary
+    config = yaml.safe_load(stream)
+
+robot_name = config["robot"]["robot_name"]
 
 # Create  .urdf file
 urdf_file = open(robot_name + ".urdf", "w")
@@ -34,12 +39,13 @@ urdf_file.write("<robot name=\"" + robot_name + "\">\n")
 # Add a color counter so that we later know which link is which color
 colorcounter = 0
 
-# Loop until user is finished adding links
-while True:
+# Get linklist from config
+links = config["robot"]["link_list"]
 
-    # Prompt user for link name and shape
-    link_name = input("Enter link name: ")
-    shape = input("Enter shape (box, sphere, cylinder): ")
+#For Schleife für link_list
+for link in links:
+    link_name = link["link_name"]
+    shape = link["link_shape"]
 
     # Check if shape is valid
     if shape not in shapes:
@@ -48,18 +54,18 @@ while True:
 
     # depending if its a box, a cylinder or a sphere enter size/radius,length/radius
     if shape == "box":
-        size = input("Enter the size of the box (eg: 1 1 1): ")
+        size = link["size"]
         shapes[shape] = "<box size =\"" + size + "\"/>"
     elif shape == "sphere":
-        radius = input("Enter the radius of the sphere (eg: 0.5): ")
+        radius = link["radius"]
         shapes[shape] = "<sphere radius =\"" + radius + "\"/>"
     elif shape == "cylinder":
-        radius = input("Enter the radius of the cylinder: ")
-        length = input("Enter the length of the cylinder: ")
+        radius = link["radius"]
+        length = link["length"]
         shapes[shape] = "<cylinder radius =" + "'" + radius + "' " + " length=" + "'" + length + "'" "/>"
 
     # Prompt user for link color
-    color = input("Enter color (e.g 'red' or 'blue'): ")
+    color = link["link_color"]
     rgba = color_map.get(color)
     if rgba is None:
         print("Invalid color")
@@ -70,8 +76,8 @@ while True:
     
 
     # Prompt user for xyz and rpy
-    xyz = input("Enter the xyz data (eg: 0 0 0.5): ")
-    rpy = input("Enter the rpy data (eg: 0 0 0): ")
+    xyz = link["xyz"]
+    rpy = link["rpy"]
     origins = "<origin rpy =" + "'" + rpy + "' " + "xyz=" + "'" + xyz + "'" + "/>"
 
     # Add the material section to the .urdf file 

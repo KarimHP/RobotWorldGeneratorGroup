@@ -1,23 +1,23 @@
 <?xml version="1.0"?>
-<robot name="testrobot">
-<material name ='blue'>
-   <color rgba='0 0 1 1'/>
+<robot name="preview_robot">
+<material name ='white'>
+   <color rgba='1 1 1'/>
 </material>
 
-<link name="base_box">
+<link name="box_one">
 <visual>
 <geometry>
 <box size ="1 1 1"/>
 </geometry>
 <origin rpy ='0 0 0' xyz='0 0 0'/>
-<material name ='blue'/></visual>
+<material name ='white'/></visual>
 </link>
 
 <material name ='red'>
-   <color rgba='1 0 0 1'/>
+   <color rgba='1 0 0'/>
 </material>
 
-<link name="base_sphere">
+<link name="sphere_one">
 <visual>
 <geometry>
 <sphere radius ="0.5"/>
@@ -26,8 +26,4 @@
 <material name ='red'/></visual>
 </link>
 
-<joint name="box_to_sphere" type="fixed">
-<parent link="base_box"/>
-<child link="base_sphere"/>
-</joint>
-</robot>
+ </robot>

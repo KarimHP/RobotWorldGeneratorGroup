@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<robot name="ytest">
+<material name ='white'>
+   <color rgba='1 1 1 1'/>
+</material>
+
+<link name="l1">
+<visual>
+<geometry>
+<box size ="0.5"/>
+</geometry>
+<origin rpy ='0 0 0' xyz='0 0 0'/>
+<material name ='white'/></visual>
+</link>
+
+<material name ='blue'>
+   <color rgba='0 0 1 1'/>
+</material>
+
+<link name="l2">
+<visual>
+<geometry>
+<box size ="0.5"/>
+</geometry>
+<origin rpy ='0 1 0' xyz='1 1 1'/>
+<material name ='blue'/></visual>
+</link>
+
