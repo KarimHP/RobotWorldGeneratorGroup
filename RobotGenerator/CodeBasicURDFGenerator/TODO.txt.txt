@@ -1,2 +1,3 @@
-Rewrite user input into config file 
+bei joints wird xyz und rpy noch nicht korrekt ausgelesen 
+rpy etc nur auslesen wenn ausgefüllt
 

@@ -1,0 +1,42 @@
+robot:
+  robot_name: ytest
+  link_list:
+  - link_name: l1
+    #usable shapes: box, cylinder, sphere
+    link_shape: box
+    #available colors: red, green, blue, white, black
+    link_color: white
+    #xyz
+    xyz: 0 0 0
+    #rpy
+    rpy: 0 0 0
+    #fill if you picked "box"
+    size: 0.5
+    #fill if you picked "cylinder"
+    length: null
+    #fill if you picked "cylinder" or "sphere"
+    radius: null
+  - link_name: l2
+    #usable shapes: box, cylinder, sphere
+    link_shape: box
+    #available colors: red, green, blue, white, black
+    link_color: blue
+    #xyz
+    xyz: 1 1 1
+    #rpy
+    rpy: 0 1 0
+    #only fill if you picked "box"
+    size: 0.5
+    #fill if you picked cylinder
+    length: null
+    #fill if you picked cylinder or sphere
+    radius: null
+  joint_list:
+  - joint_name: j1
+    type: revolute
+    axis: 1 0 0
+    limits: 0 0 1 1
+    link1: l1
+    link2: l2
+    origin: 0 0 0 0 0 0
+ 
