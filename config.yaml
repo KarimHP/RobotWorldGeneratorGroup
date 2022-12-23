@@ -53,8 +53,8 @@ world:
         p: 0
         y: 0
       params:
-        width: 6
-        height: 6
+        width: 3
+        height: 3
         unit_size: .4
         wall_width: .05
-        wall_height: .65
+        wall_height: 1
