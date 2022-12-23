@@ -8,22 +8,22 @@ physicsClient = pyb.connect(pyb.GUI) # ruft den graphischen Client auf
 pyb.setAdditionalSearchPath(pybullet_data.getDataPath()) # notwendig für Boden ?
 planeID = pyb.loadURDF("plane.urdf") # Boden wird generiert 
 #wir generieren den roboter, usefixedbase hindert den roboter daran umzukippen
-robot = pyb.loadURDF("/home/parallels/Desktop/RobotAndWorldGenerator/jeffrey.urdf")
+robot = pyb.loadURDF("OwnRobotModels/materials.urdf")
 pyb.setGravity(0,0,-9.81)
 #optional eigentlich ist das sowieso auf 0 gesetzt, sodass eine simulation erst erfolgt wenn
 # durch code angegeben 
 pyb.setRealTimeSimulation(0)
 
 #unklar was es macht
-#pyb.setJointMotorControlArray(robot,range(7),p.POSITION_CONTROL,targetPositions=[1.5] * 7)
+#pyb.setJointMotorControlArray(robot,range(7),pyb.POSITION_CONTROL,targetPositions=[1.5] * 7)
 
 print("Start Simulation? Y/N")
 b = input("Enter answer")
 
 #forschleife die die schritte simuliert, nun bewegt sich auch der Roboter
-#for _ in range (300): 
- #   pyb.stepSimulation()
-  #  time.sleep(1./10.)
+for _ in range (300): 
+    pyb.stepSimulation()
+    time.sleep(1./10.)
 
 
 
