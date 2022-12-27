@@ -45,16 +45,26 @@ world:
   obstacles:
     - type: "maze"
       position:
-        x: -4
-        y: -4
+        x: -7
+        y: -7
         z: 0
       rotation:
         r: 0
         p: 0
         y: 0
       params:
-        width: 6
-        height: 6
+        width: 12
+        height: 12
         unit_size: .4
         wall_width: .05
         wall_height: .65
+        difficulty: 1
+    - type: "cube"
+      position:
+        x: 2
+        y: 2
+        z: 0
+      rotation:
+        r: 0
+        p: 0
+        y: 0

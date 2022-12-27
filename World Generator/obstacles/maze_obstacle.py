@@ -3,6 +3,7 @@ import numpy as np
 from mazelib import Maze
 from mazelib.generate.Prims import Prims
 from mazelib.generate.DungeonRooms import DungeonRooms
+from mazelib.solve.BacktrackingSolver import BacktrackingSolver
 
 class MazeObstacle:
 
@@ -16,15 +17,15 @@ class MazeObstacle:
         collision_id = p.createCollisionShape(shapeType=p.GEOM_BOX, halfExtents=halfExtents)
         return collision_id
 
-    def generate(self, position, rotation, width, height, unit_size=.5, wall_height=1, wall_width=.25):
+    def generate(self, position, rotation, width, height, unit_size=.5, wall_height=1, wall_width=.25, difficulty=.5):
         start_x = position[0]
         start_y = position[1]
         start_z = position[2]
 
         m = Maze()
         m.generator = DungeonRooms(width, height)
-        m.generate()
-
+        m.solver = BacktrackingSolver()
+        m.generate_monte_carlo(100, 10, difficulty)
         for row_idx, row in enumerate(m.grid):
             for cell_idx, cell in enumerate(row):
                 if cell == 0:

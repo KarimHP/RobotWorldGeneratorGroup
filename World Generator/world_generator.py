@@ -4,6 +4,7 @@ import os
 import glob
 import sys
 import yaml
+import time
 from obstacles.maze_obstacle import MazeObstacle
 from sensors.lidar import LidarSensor
 
@@ -41,10 +42,10 @@ class WorldGenerator:
     def load_obstacles(self):
         obstacles = self.config["obstacles"]
         for obstacle in obstacles:
-            params = obstacle["params"]
             if obstacle["type"] == "maze":
+                params = obstacle["params"]
                 maze = MazeObstacle()
-                maze.generate(self.getPosition(obstacle), self.getRotation(obstacle), params["width"], params["height"], params["unit_size"], params["wall_height"], params["wall_width"])
+                maze.generate(self.getPosition(obstacle), self.getRotation(obstacle), params["width"], params["height"], params["unit_size"], params["wall_height"], params["wall_width"], params["difficulty"])
             else:
                 p.loadURDF(f"{obstacle['type']}.urdf", self.getPosition(obstacle), self.getRotation(obstacle))
 
@@ -61,6 +62,7 @@ class WorldGenerator:
         for sensor in self.sensors:
             sensor.update()
         p.stepSimulation()
+        time.sleep(1./10.)
 
 
     def __init__(self) -> None:
