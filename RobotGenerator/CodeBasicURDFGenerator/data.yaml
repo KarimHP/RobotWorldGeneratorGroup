@@ -1,27 +1,59 @@
 robot:
-  robot_name: ytest
+  robot_name: r2d2generated
+  link_list:
+  - link_name: base_link
+    #usable shapes: box, cylinder, sphere
+    link_shape: cylinder
+    #available colors: red, green, blue, white, black
+    link_color: blue
+    #xyz
+    xyz: 0 0 0
+    #rpy
+    rpy: 0 0 0
+    #fill if you picked "box"
+    size: null
+    #fill if you picked "cylinder"
+    length: 0.6
+    #fill if you picked "cylinder" or "sphere"
+    radius: 0.2
+  - link_name: right_leg
+    #usable shapes: box, cylinder, sphere
+    link_shape: box
+    #available colors: red, green, blue, white, black
+    link_color: red
+    #xyz
+    xyz: 0 0 -0.3
+    #rpy
+    rpy: 0 1.57075 0
+    #only fill if you picked "box"
+    size: 0.6 0.1 0.2
+    #fill if you picked cylinder
+    length: null
+    #fill if you picked cylinder or sphere
+    radius: null
+  - link_name: left_leg
+    #usable shapes: box, cylinder, sphere
+    link_shape: box
+    #available colors: red, green, blue, white, black
+    link_color: red
+    #xyz
+    xyz: 0 0 -0.3
+    #rpy
+    rpy: 0 1.57075 0
+    #only fill if you picked "box"
+    size: 0.6 0.1 0.2
+    #fill if you picked cylinder
+    length: null
+    #fill if you picked cylinder or sphere
+    radius: null
   joint_list:
-  - joint_name: j1
-    type: revolute
-    axis: 1 0 0
-    limits: 0 0 1 1
-    link1: l1
-    link2: l2
-    origin: 0 0 0 0 0 0
-  - joint_name: j2
-    type: revolute
-    axis: 1 0 0
-    limits: 0 0 1 1
-    link1: l1
-    link2: l2
-    origin: 0 0 0 0 0 0
-  - joint_name: j3
-    link1: l2
-    link2: l3
+  - joint_name: base_to_left_leg
     type: fixed
-    origin: 0 0 0 0 0 0
-  - joint_name: j4
-    link1: l2
-    link2: l1
+    link1: base_link
+    link2: left_leg
+    origin: 0 -0.22 0.25 0 0 0
+  - joint_name: base_to_right_leg
     type: fixed
-    origin: 0 0 0 0 0 0
+    link1: base_link
+    link2: right_leg
+    origin: 0 0.22 0.25 0 0 0

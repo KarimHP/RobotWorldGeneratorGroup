@@ -5,12 +5,13 @@ import glob
 import sys
 import yaml
 import time
+import math
 from obstacles.maze_obstacle import MazeObstacle
 from sensors.lidar import LidarSensor
 
 class WorldGenerator:
     sensors = []
-    urdf_path = "urdfs"
+    urdf_path = "../urdfs/"
 
     def load_config(self):
         with open("../config.yaml", "r") as stream:
@@ -23,21 +24,23 @@ class WorldGenerator:
         p.setGravity(0,0,-9.81)
         p.setRealTimeSimulation(0)
 
-    def find_urdfs(self, search_folder):
-        return list(glob.iglob(os.path.join(self.urdf_path, search_folder, "**/*.urdf"), recursive=True))
+    def find_urdfs(self, search_name):
+        return list(glob.iglob(os.path.join(self.urdf_path, f"**/{search_name}.urdf"), recursive=True))
 
     def getPosition(self, obj):
         xyz = obj["position"]
         return [xyz["x"], xyz["y"], xyz["z"]]
 
     def getRotation(self, obj):
+        conversion_fac = math.pi / 180
         rpy = obj["rotation"]
-        return p.getQuaternionFromEuler([rpy["r"], rpy["p"], rpy["y"]])
+        print([rpy["r"] * conversion_fac, rpy["p"] * conversion_fac, rpy["y"] * conversion_fac])
+        return p.getQuaternionFromEuler([rpy["r"] * conversion_fac, rpy["p"] * conversion_fac, rpy["y"] * conversion_fac])
 
     def load_robot(self):
         robot = self.config["robot"]
         robot_urdf = self.find_urdfs(robot["type"])[0]
-        self.robot_id = p.loadURDF(robot_urdf, self.getPosition(robot), self.getRotation(robot))
+        self.robot_id = p.loadURDF(robot_urdf, self.getPosition(robot), self.getRotation(robot), useFixedBase=True)
 
     def load_obstacles(self):
         obstacles = self.config["obstacles"]
@@ -45,7 +48,7 @@ class WorldGenerator:
             if obstacle["type"] == "maze":
                 params = obstacle["params"]
                 maze = MazeObstacle()
-                maze.generate(self.getPosition(obstacle), self.getRotation(obstacle), params["width"], params["height"], params["unit_size"], params["wall_height"], params["wall_width"], params["difficulty"])
+                maze.generate(self.getPosition(obstacle), self.getRotation(obstacle), params)
             else:
                 p.loadURDF(f"{obstacle['type']}.urdf", self.getPosition(obstacle), self.getRotation(obstacle))
 
@@ -58,7 +61,6 @@ class WorldGenerator:
 
 
     def update(self):
-        p.removeAllUserDebugItems()
         for sensor in self.sensors:
             sensor.update()
         p.stepSimulation()

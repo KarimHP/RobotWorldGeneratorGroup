@@ -5,6 +5,7 @@ import pybullet as p
 _EPS = np.finfo(float).eps * 4.0
 
 class LidarSensor:
+    debug_lines = []
 
     def __init__(self, robot_id, link_idx, pos, orn, ray_min=0.02, ray_max=0.4, ray_num_ver=6, ray_num_hor=12) -> None:
         self.ray_min = ray_min
@@ -93,14 +94,18 @@ class LidarSensor:
                 ray_froms.append(start)
                 ray_tops.append(end)
         results = p.rayTestBatch(ray_froms, ray_tops)
-        
+ 
         if render:
+            for line in self.debug_lines:
+                p.removeUserDebugItem(line)
+            self.debug_lines.clear()
+
             hitRayColor = [0, 1, 0]
             missRayColor = [1, 0, 0]
 
             for index, result in enumerate(results):
                 if result[0] == -1:
-                    p.addUserDebugLine(ray_froms[index], ray_tops[index], missRayColor)
+                    self.debug_lines.append(p.addUserDebugLine(ray_froms[index], ray_tops[index], missRayColor))
                 else:
-                    p.addUserDebugLine(ray_froms[index], ray_tops[index], hitRayColor)
+                    self.debug_lines.append(p.addUserDebugLine(ray_froms[index], ray_tops[index], hitRayColor))
         return results

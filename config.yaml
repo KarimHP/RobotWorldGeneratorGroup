@@ -1,70 +1,83 @@
 robot:
   hint: "ToDo for robot generator part"
+  robot_name: "test_robot"
+  # How many Links do you want to create?
+  link_count: "2"
+  #please copy this part depending on the number of links you want to create
+  link_id: "1"
+  link_name: "link1"
+  link_id: "2"
+  link_name: "link2"
+  #end of link part
 world:
   robot:
-    type: "kuka_kr210_support"
+    type: "kr210l150"
     position:
-      x: 0
-      y: 0
-      z: 0
+      x: -3
+      y: 3
+      z: .3
     rotation:
       r: 0
       p: 0
       y: 0
     sensors:
+      # - type: "lidar"
+      #   link: 3
+      #   position:
+      #     x: 0
+      #     y: 0
+      #     z: .1
+      #   rotation:
+      #     r: 0
+      #     p: 0
+      #     y: 0
+      #   params:
+      #     ray_min: .02
+      #     ray_max: 2
+      #     ray_num_ver: 6
+      #     ray_num_hor: 6
       - type: "lidar"
         link: 6
-        position:
-          x: 0
-          y: 0
-          z: .1
-        rotation:
-          r: 0
-          p: 0
-          y: 0
-        params:
-          ray_min: .02
-          ray_max: 2
-          ray_num_ver: 6
-          ray_num_hor: 6
-      - type: "lidar"
-        link: 3
         position:
           x: 0
           y: 0
           z: .12
         rotation:
           r: 0
-          p: 0
+          p: 90
           y: 0
         params:
           ray_min: .02
           ray_max: 2
-          ray_num_ver: 6
-          ray_num_hor: 6
+          ray_num_ver: 3
+          ray_num_hor: 12
   obstacles:
     - type: "maze"
       position:
-        x: -7
-        y: -7
+        x: 0
+        y: 0
         z: 0
       rotation:
         r: 0
-        p: 0
+        p: -90
         y: 0
       params:
-        width: 12
-        height: 12
-        unit_size: .4
-        wall_width: .05
-        wall_height: .65
+        width: 6
+        height: 9
+        wall_width: .25
+        wall_height: .5
+        wall_thickness: .05
         difficulty: 1
+
+        connector_strict: True
+        connector_probability: .1
+        connector_height: .25
     - type: "cube"
       position:
-        x: 2
-        y: 2
-        z: 0
+        x: -3
+        y: -3
+        z: 2
       rotation:
-        r: 0
+        r: 1
         p: 0
         y: 0

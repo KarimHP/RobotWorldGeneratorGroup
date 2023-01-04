@@ -1,17 +1,105 @@
 import yaml
+import os
+import sys
+
+URDF_PATH="../../urdfs/generated"
 
 if __name__ == '__main__':
+    os.chdir(sys.path[0])
     with open("data.yaml", 'r') as stream:
         config = yaml.safe_load(stream)
+
+    # some basic shapes
+    shapes = {
+        "box": "<box size='1 1 1'/>",
+        "sphere": "<sphere radius='0.5'/>",
+        "cylinder": "<cylinder radius='0.5' length='1'/>"
+    }
+
+    # Define the colors Array and the Color_map which appends the correct rgba code to the given color
+    colors = []
+    color_map = {
+        "red": "1 0 0 1",
+        "green": "0 1 0 1",
+        "blue": "0 0 1 1",
+        "white": "1 1 1 1",
+        "black": "0 0 0 1"
+    }
+
+    # standard origins
+    origins = "<origin rpy = '0 0 0' xyz = '0 0 0'/>"
 
     robot_name = config["robot"]["robot_name"]
 
     # Create  .urdf file
-    urdf_file = open(robot_name + ".urdf", "w")
+    urdf_file = open(os.path.join(URDF_PATH, robot_name + ".urdf"), "w")
 
     # Write header information for the .urdf file
     urdf_file.write("<?xml version=\"1.0\"?>\n")
     urdf_file.write("<robot name=\"" + robot_name + "\">\n")
+
+    # Add a color counter so that we later know which link is which color
+    colorcounter = 0
+
+    # Get linklist from config
+    links = config["robot"]["link_list"]
+
+    # For Schleife für link_list
+    for link in links:
+        link_name = link["link_name"]
+        shape = link["link_shape"]
+
+        # Check if shape is valid
+        if shape not in shapes:
+            print("Invalid shape. Please try again.")
+            continue
+
+        # depending if its a box, a cylinder or a sphere enter size/radius,length/radius
+        if shape == "box":
+            size = str(link["size"])
+            shapes[shape] = "<box size =\"" + size + "\"/>"
+        elif shape == "sphere":
+            radius = str(link["radius"])
+            shapes[shape] = "<sphere radius =\"" + radius + "\"/>"
+        elif shape == "cylinder":
+            radius = str(link["radius"])
+            length = str(link["length"])
+            shapes[shape] = "<cylinder radius =" + "'" + radius + "' " + " length=" + "'" + length + "'" "/>"
+
+        # Prompt user for link color
+        color = link["link_color"]
+        rgba = color_map.get(color)
+        if rgba is None:
+            print("Invalid color")
+            continue
+
+        # Add the rgba value to the colors array
+        colors.append(rgba)
+
+        # Prompt user for xyz and rpy
+        xyz = str(link["xyz"])
+        rpy = str(link["rpy"])
+        origins = "<origin rpy =" + "'" + rpy + "' " + "xyz=" + "'" + xyz + "'" + "/>"
+
+        # Add the material section to the .urdf file
+        urdf_file.write("<material name =" + "'" + color + "'" + ">\n")
+        urdf_file.write("   <color rgba=" + "'" + colors[colorcounter] + "'" + "/>\n")
+        urdf_file.write("</material>\n")
+
+        # Add link to .urdf file
+        urdf_file.write("\n")
+        urdf_file.write("<link name=\"" + link_name + "\">\n")
+        urdf_file.write("<visual>\n")
+        urdf_file.write("<geometry>\n")
+        urdf_file.write(shapes[shape] + "\n")
+        urdf_file.write("</geometry>\n")
+        urdf_file.write(origins + "\n")
+        urdf_file.write("<material name =" + "'" + color + "'" + "/>")
+        urdf_file.write("</visual>\n")
+        urdf_file.write("</link>\n")
+        urdf_file.write("\n")
+
+        colorcounter = colorcounter + 1
 
     joints = config["robot"]["joint_list"]
 
@@ -21,9 +109,9 @@ if __name__ == '__main__':
         joint_type = joint["type"]
         link1 = joint["link1"]
         link2 = joint["link2"]
-        origin = joint["origin"]
-        origin_xyz = origin[:len(origin) // 2]
-        origin_rpy = origin[len(origin) // 2:]
+        origins = str.split(joint["origin"], " ")
+        origin_xyz = ' '.join(map(str, origins[:3]))
+        origin_rpy = ' '.join(map(str, origins[3:]))
 
         if joint_type == "revolute" or joint_type == "prismatic":
             axis = joint["axis"]
@@ -58,6 +146,7 @@ if __name__ == '__main__':
             joint_limit = f"<limit lower=\"{limit_lower}\" upper=\"{limit_upper}\" effort=\"{limit_effort}\" " \
                           f"velocity=\"{limit_velocity}\"/>"
             joint_options = f"{joint_origin}\n {joint_limit}\n"
+
         elif joint_type == "planar":
             joint_origin = f"<origin xyz=\"{origin_xyz}\" rpy=\"{origin_rpy}\"/>"
             axis = joint["axis"]
