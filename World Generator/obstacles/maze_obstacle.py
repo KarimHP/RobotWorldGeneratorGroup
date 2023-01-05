@@ -10,8 +10,11 @@ from .maze_urdf import MazeUrdf
 
 class MazeObstacle:
 
-    def __init__(self) -> None:
-        pass
+    def __init__(self, position, rotation, params) -> None:
+        self.position = position
+        self.rotation = rotation
+        self.params = params
+        self.generate()
 
 
     def has_el_prev_row(self, grid, row_idx, cell_idx):
@@ -26,17 +29,17 @@ class MazeObstacle:
     def has_el_next_col(self, grid, row_idx, cell_idx):
         return cell_idx < len(grid[row_idx]) - 1 and grid[row_idx][cell_idx + 1]
 
-    def generate(self, position, rotation, params):
-        width = params["width"]
-        height = params["height"]
-        wall_width = params["wall_width"]
-        wall_height = params["wall_height"]
-        wall_thickness = params["wall_thickness"]
-        difficulty = params["difficulty"]
+    def generate(self):
+        width = self.params["width"]
+        height = self.params["height"]
+        wall_width = self.params["wall_width"]
+        wall_height = self.params["wall_height"]
+        wall_thickness = self.params["wall_thickness"]
+        difficulty = self.params["difficulty"]
 
-        connector_strict = params["connector_strict"]
-        connector_probability = params["connector_probability"]
-        connector_height = params["connector_height"]
+        connector_strict = self.params["connector_strict"]
+        connector_probability = self.params["connector_probability"]
+        connector_height = self.params["connector_height"]
 
         xy_offset = (wall_thickness / 2)
         wall_size = wall_width + wall_thickness
@@ -77,11 +80,7 @@ class MazeObstacle:
         f.write(urdf.get_urdf())
         f.close()
 
-        start_x = position[0]
-        start_y = position[1]
-        start_z = position[2]
-
-        maze_id = p.loadURDF(file_name, [start_x, start_y, start_z], rotation, useFixedBase=True)
+        self.id = p.loadURDF(file_name, self.position, self.rotation, useFixedBase=True)
 
         max_x = xy_offset + width * wall_width
         max_y = xy_offset + height * wall_width
@@ -91,7 +90,7 @@ class MazeObstacle:
             to_y = ((m.solutions[0][i + 1][0] - 1) / width) * max_x + wall_size
             to_x = ((m.solutions[0][i + 1][1] - 1) / height) * max_y + wall_size
             
-            p.addUserDebugLine([from_x, from_y, .1], [to_x, to_y, .1], [1, 1, 0], 3, 0, maze_id, 0)
+            p.addUserDebugLine([from_x, from_y, .1], [to_x, to_y, .1], [1, 1, 0], 3, 0, self.id, 0)
 
                     
         

@@ -1,10 +1,11 @@
 import math
 import numpy as np
 import pybullet as p
+from .base import BaseSensor
 
 _EPS = np.finfo(float).eps * 4.0
 
-class LidarSensor:
+class LidarSensor(BaseSensor):
     debug_lines = []
 
     def __init__(self, robot_id, link_idx, pos, orn, ray_min=0.02, ray_max=0.4, ray_num_ver=6, ray_num_hor=12) -> None:
@@ -16,8 +17,6 @@ class LidarSensor:
         self.link_idx = link_idx
         self.pos = pos
         self.orn = orn
-        # How to use this stuff???
-        # #p.setCollisionFilterGroupMask(robot_id, link_idx, 0b001)
 
     def update(self):
         link_state = p.getLinkState(self.robot_id, self.link_idx)
