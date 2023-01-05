@@ -1,3 +1,3 @@
 class BaseSensor:
-    def update():
+    def step(self):
         pass

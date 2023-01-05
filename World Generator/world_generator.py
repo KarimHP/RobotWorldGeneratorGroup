@@ -6,16 +6,19 @@ import sys
 import yaml
 import time
 import math
-from obstacles.maze_obstacle import MazeObstacle
+from obstacles.maze.maze_obstacle import MazeObstacle
 from sensors.base import BaseSensor
 from sensors.lidar import LidarSensor
+from obstacles.base import BaseObstacle
+from obstacles.static_object import StaticObject
+from obstacles.moving_object import MovingObject
 from robot import Robot
 
 URDF_PATH = "../urdfs/"
 
 class WorldGenerator:
     robot: Robot = None
-    obstacles: list[int] = []
+    obstacles: list[BaseObstacle] = []
     sensors: list[BaseSensor] = []
 
     def load_config(self):
@@ -45,9 +48,9 @@ class WorldGenerator:
             if obstacle["type"] == "maze":
                 params = obstacle["params"]
                 maze = MazeObstacle(self.getPosition(obstacle), self.getRotation(obstacle), params)
-                self.obstacles.append(maze.id)
+                self.obstacles.append(maze)
             else:
-                self.obstacles.append(p.loadURDF(f"{obstacle['type']}.urdf", self.getPosition(obstacle), self.getRotation(obstacle)))
+                self.obstacles.append(StaticObject(f"{obstacle['type']}.urdf", self.getPosition(obstacle), self.getRotation(obstacle)))
 
     def load_sensors(self):
         sensors = self.config["robot"]["sensors"]

@@ -6,9 +6,10 @@ from mazelib.generate.Prims import Prims
 from mazelib.generate.DungeonRooms import DungeonRooms
 from mazelib.solve.BacktrackingSolver import BacktrackingSolver
 
-from .maze_urdf import MazeUrdf
+from obstacles.base import BaseObstacle
+from obstacles.maze.maze_urdf import MazeUrdf
 
-class MazeObstacle:
+class MazeObstacle(BaseObstacle):
 
     def __init__(self, position, rotation, params) -> None:
         self.position = position

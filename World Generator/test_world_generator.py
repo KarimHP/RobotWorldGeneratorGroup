@@ -13,9 +13,13 @@ def init_pyb():
     p.setGravity(0,0,-9.81)
     p.setRealTimeSimulation(0)
 
-def update(world_generator):
+def step(world_generator: WorldGenerator):
     for sensor in world_generator.sensors:
-        sensor.update()
+        sensor.step()
+
+    for obstacle in world_generator.obstacles:
+        obstacle.step()
+    
     p.stepSimulation()
     time.sleep(1./10.)
 
@@ -26,5 +30,5 @@ if __name__ == "__main__":
     generator = WorldGenerator()
 
     while 1:
-        update(generator)
+        step(generator)
         
