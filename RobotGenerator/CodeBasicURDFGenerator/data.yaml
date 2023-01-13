@@ -5,7 +5,7 @@ robot:
     #usable shapes: box, cylinder, sphere
     link_shape: cylinder
     #available colors: red, green, blue, white, black
-    link_color: blue
+    link_color: red
     #xyz
     xyz: 0 0 0
     #rpy
@@ -20,7 +20,7 @@ robot:
     #usable shapes: box, cylinder, sphere
     link_shape: box
     #available colors: red, green, blue, white, black
-    link_color: red
+    link_color: blue
     #xyz
     xyz: 0 0 -0.3
     #rpy
@@ -35,7 +35,7 @@ robot:
     #usable shapes: box, cylinder, sphere
     link_shape: box
     #available colors: red, green, blue, white, black
-    link_color: red
+    link_color: blue
     #xyz
     xyz: 0 0 -0.3
     #rpy
@@ -48,12 +48,16 @@ robot:
     radius: null
   joint_list:
   - joint_name: base_to_left_leg
-    type: fixed
+    type: revolute
     link1: base_link
     link2: left_leg
     origin: 0 -0.22 0.25 0 0 0
+    axis: 0 1 0
+    limits: 0 -3 0.8 5
   - joint_name: base_to_right_leg
-    type: fixed
+    type: revolute
     link1: base_link
     link2: right_leg
     origin: 0 0.22 0.25 0 0 0
+    axis: 0 1 0
+    limits: 0 -3 0.8 5
