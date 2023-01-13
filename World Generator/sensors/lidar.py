@@ -1,10 +1,12 @@
 import math
 import numpy as np
 import pybullet as p
+from .base import BaseSensor
 
 _EPS = np.finfo(float).eps * 4.0
 
-class LidarSensor:
+class LidarSensor(BaseSensor):
+    debug_lines = []
 
     def __init__(self, robot_id, link_idx, pos, orn, ray_min=0.02, ray_max=0.4, ray_num_ver=6, ray_num_hor=12) -> None:
         self.ray_min = ray_min
@@ -15,15 +17,13 @@ class LidarSensor:
         self.link_idx = link_idx
         self.pos = pos
         self.orn = orn
-        # How to use this stuff???
-        # #p.setCollisionFilterGroupMask(robot_id, link_idx, 0b001)
 
-    def update(self):
+    def step(self):
         link_state = p.getLinkState(self.robot_id, self.link_idx)
         new_transform = p.multiplyTransforms(link_state[0], link_state[1], self.pos, self.orn)
         self.current_pos = new_transform[0]
         self.current_orn = new_transform[1]
-        self._set_lidar_cylinder(render=True)
+        return self._set_lidar_cylinder(render=True)
 
     def quaternion_matrix(self, quaternion):
         """Return homogeneous rotation matrix from quaternion.
@@ -93,14 +93,18 @@ class LidarSensor:
                 ray_froms.append(start)
                 ray_tops.append(end)
         results = p.rayTestBatch(ray_froms, ray_tops)
-        
+ 
         if render:
+            for line in self.debug_lines:
+                p.removeUserDebugItem(line)
+            self.debug_lines.clear()
+
             hitRayColor = [0, 1, 0]
             missRayColor = [1, 0, 0]
 
             for index, result in enumerate(results):
                 if result[0] == -1:
-                    p.addUserDebugLine(ray_froms[index], ray_tops[index], missRayColor)
+                    self.debug_lines.append(p.addUserDebugLine(ray_froms[index], ray_tops[index], missRayColor))
                 else:
-                    p.addUserDebugLine(ray_froms[index], ray_tops[index], hitRayColor)
+                    self.debug_lines.append(p.addUserDebugLine(ray_froms[index], ray_tops[index], hitRayColor))
         return results

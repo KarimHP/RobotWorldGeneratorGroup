@@ -1,6 +1,11 @@
 import yaml
+import os
+import sys
+
+URDF_PATH="../../urdfs/generated"
 
 if __name__ == '__main__':
+    os.chdir(sys.path[0])
     with open("data.yaml", 'r') as stream:
         config = yaml.safe_load(stream)
 
@@ -27,7 +32,7 @@ if __name__ == '__main__':
     robot_name = config["robot"]["robot_name"]
 
     # Create  .urdf file
-    urdf_file = open(robot_name + ".urdf", "w")
+    urdf_file = open(os.path.join(URDF_PATH, robot_name + ".urdf"), "w")
 
     # Write header information for the .urdf file
     urdf_file.write("<?xml version=\"1.0\"?>\n")

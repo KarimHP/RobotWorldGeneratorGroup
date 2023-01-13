@@ -1,0 +1,3318 @@
+
+        <robot name="maze">
+            <link name="base_link">
+               
+            </link>
+        
+                <link name="link_0">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.175 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.175 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_0" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_0"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_1">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.025 0.175 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.025 0.175 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_1" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_1"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_2">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.475 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.475 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_2" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_2"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_3">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.775 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.775 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_3" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_3"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_4">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.075 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.075 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_4" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_4"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_5">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.3749999999999998 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.3749999999999998 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_5" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_5"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_6">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.6749999999999998 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.6749999999999998 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_6" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_6"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_7">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.9749999999999996 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.9749999999999996 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_7" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_7"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_8">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.8249999999999997 0.175 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.8249999999999997 0.175 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_8" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_8"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_9">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="2.275 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="2.275 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_9" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_9"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_10">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="2.5749999999999997 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="2.5749999999999997 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_10" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_10"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_11">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="2.8749999999999996 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="2.8749999999999996 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_11" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_11"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_12">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="3.175 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="3.175 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_12" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_12"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_13">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="3.4749999999999996 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="3.4749999999999996 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_13" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_13"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_14">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="3.7749999999999995 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="3.7749999999999995 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_14" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_14"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_15">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="4.075 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="4.075 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_15" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_15"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_16">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="4.375000000000001 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="4.375000000000001 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_16" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_16"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_17">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="4.675000000000001 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="4.675000000000001 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_17" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_17"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_18">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="4.9750000000000005 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="4.9750000000000005 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_18" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_18"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_19">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="5.275 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="5.275 0.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_19" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_19"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_20">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="5.425 0.175 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="5.425 0.175 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_20" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_20"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_21">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.025 0.475 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.025 0.475 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_21" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_21"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_22">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.8249999999999997 0.475 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.8249999999999997 0.475 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_22" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_22"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_23">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="5.425 0.475 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="5.425 0.475 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_23" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_23"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_24">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.025 0.775 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.025 0.775 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_24" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_24"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_25">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.775 0.625 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.775 0.625 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_25" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_25"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_26">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.075 0.625 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.075 0.625 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_26" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_26"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_27">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.2249999999999999 0.775 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.2249999999999999 0.775 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_27" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_27"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_28">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="2.425 0.775 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="2.425 0.775 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_28" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_28"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_29">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="3.175 0.625 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="3.175 0.625 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_29" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_29"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_30">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="3.4749999999999996 0.625 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="3.4749999999999996 0.625 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_30" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_30"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_31">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="3.7749999999999995 0.625 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="3.7749999999999995 0.625 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_31" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_31"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_32">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="4.075 0.625 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="4.075 0.625 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_32" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_32"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_33">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="4.375000000000001 0.625 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="4.375000000000001 0.625 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_33" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_33"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_34">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="4.675000000000001 0.625 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="4.675000000000001 0.625 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_34" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_34"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_35">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="4.9750000000000005 0.625 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="4.9750000000000005 0.625 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_35" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_35"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_36">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="5.275 0.625 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="5.275 0.625 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_36" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_36"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_37">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="5.425 0.775 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="5.425 0.775 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_37" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_37"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_38">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.025 1.075 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.025 1.075 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_38" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_38"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_39">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.2249999999999999 1.075 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.2249999999999999 1.075 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_39" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_39"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_40">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="2.425 1.075 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="2.425 1.075 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_40" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_40"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_41">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="5.425 1.075 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="5.425 1.075 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_41" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_41"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_42">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.025 1.3749999999999998 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.025 1.3749999999999998 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_42" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_42"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_43">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.625 1.3749999999999998 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.625 1.3749999999999998 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_43" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_43"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_44">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.3749999999999998 1.2249999999999999 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.3749999999999998 1.2249999999999999 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_44" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_44"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_45">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.2249999999999999 1.3749999999999998 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.2249999999999999 1.3749999999999998 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_45" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_45"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_46">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.6749999999999998 1.2249999999999999 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.6749999999999998 1.2249999999999999 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_46" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_46"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_47">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.9749999999999996 1.2249999999999999 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.9749999999999996 1.2249999999999999 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_47" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_47"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_48">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="2.275 1.2249999999999999 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="2.275 1.2249999999999999 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_48" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_48"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_49">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="2.5749999999999997 1.2249999999999999 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="2.5749999999999997 1.2249999999999999 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_49" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_49"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_50">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="2.8749999999999996 1.2249999999999999 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="2.8749999999999996 1.2249999999999999 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_50" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_50"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_51">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="3.175 1.2249999999999999 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="3.175 1.2249999999999999 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_51" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_51"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_52">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="3.025 1.3749999999999998 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="3.025 1.3749999999999998 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_52" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_52"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_53">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="3.4749999999999996 1.2249999999999999 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="3.4749999999999996 1.2249999999999999 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_53" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_53"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_54">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="3.7749999999999995 1.2249999999999999 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="3.7749999999999995 1.2249999999999999 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_54" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_54"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_55">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="4.075 1.2249999999999999 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="4.075 1.2249999999999999 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_55" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_55"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_56">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="4.375000000000001 1.2249999999999999 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="4.375000000000001 1.2249999999999999 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_56" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_56"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_57">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="4.675000000000001 1.2249999999999999 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="4.675000000000001 1.2249999999999999 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_57" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_57"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_58">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="5.125 1.2249999999999999 0.125"/>
+                        <geometry>
+                            <box size="0.6 0.05 0.25"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="5.125 1.2249999999999999 0.125"/>
+                        <geometry>
+                            <box size="0.6 0.05 0.25"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_58" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_58"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_59">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="5.425 1.3749999999999998 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="5.425 1.3749999999999998 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_59" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_59"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_60">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.025 1.6749999999999998 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.025 1.6749999999999998 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_60" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_60"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_61">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.625 1.6749999999999998 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.625 1.6749999999999998 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_61" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_61"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_62">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.2249999999999999 1.6749999999999998 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.2249999999999999 1.6749999999999998 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_62" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_62"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_63">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="3.025 1.6749999999999998 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="3.025 1.6749999999999998 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_63" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_63"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_64">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="5.425 1.6749999999999998 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="5.425 1.6749999999999998 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_64" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_64"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_65">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.025 1.9749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.025 1.9749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_65" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_65"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_66">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.625 1.9749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.625 1.9749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_66" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_66"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_67">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.9749999999999996 1.8249999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.9749999999999996 1.8249999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_67" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_67"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_68">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="2.275 1.8249999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="2.275 1.8249999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_68" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_68"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_69">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="2.5749999999999997 1.8249999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="2.5749999999999997 1.8249999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_69" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_69"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_70">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="2.425 1.9749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="2.425 1.9749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_70" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_70"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_71">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="2.8749999999999996 1.8249999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="2.8749999999999996 1.8249999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_71" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_71"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_72">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="3.7749999999999995 1.8249999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="3.7749999999999995 1.8249999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_72" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_72"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_73">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="3.6249999999999996 1.9749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="3.6249999999999996 1.9749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_73" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_73"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_74">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="4.075 1.8249999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="4.075 1.8249999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_74" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_74"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_75">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="4.375000000000001 1.8249999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="4.375000000000001 1.8249999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_75" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_75"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_76">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="4.675000000000001 1.8249999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="4.675000000000001 1.8249999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_76" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_76"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_77">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="4.825 1.9749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="4.825 1.9749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_77" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_77"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_78">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="5.425 1.9749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="5.425 1.9749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_78" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_78"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_79">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.025 2.275 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.025 2.275 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_79" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_79"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_80">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.625 2.275 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.625 2.275 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_80" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_80"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_81">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="2.425 2.275 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="2.425 2.275 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_81" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_81"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_82">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="3.6249999999999996 2.275 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="3.6249999999999996 2.275 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_82" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_82"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_83">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="4.825 2.275 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="4.825 2.275 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_83" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_83"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_84">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="5.425 2.275 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="5.425 2.275 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_84" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_84"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_85">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.175 2.425 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.175 2.425 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_85" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_85"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_86">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.025 2.5749999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.025 2.5749999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_86" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_86"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_87">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.475 2.425 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.475 2.425 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_87" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_87"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_88">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.775 2.425 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.775 2.425 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_88" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_88"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_89">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.075 2.425 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.075 2.425 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_89" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_89"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_90">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.3749999999999998 2.425 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.3749999999999998 2.425 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_90" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_90"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_91">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.6749999999999998 2.425 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.6749999999999998 2.425 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_91" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_91"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_92">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="2.425 2.5749999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="2.425 2.5749999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_92" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_92"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_93">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="3.175 2.425 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="3.175 2.425 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_93" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_93"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_94">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="3.025 2.5749999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="3.025 2.5749999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_94" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_94"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_95">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="3.4749999999999996 2.425 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="3.4749999999999996 2.425 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_95" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_95"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_96">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="3.6249999999999996 2.5749999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="3.6249999999999996 2.5749999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_96" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_96"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_97">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="4.375000000000001 2.425 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="4.375000000000001 2.425 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_97" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_97"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_98">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="4.2250000000000005 2.5749999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="4.2250000000000005 2.5749999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_98" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_98"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_99">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="4.675000000000001 2.425 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="4.675000000000001 2.425 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_99" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_99"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_100">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="5.425 2.5749999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="5.425 2.5749999999999997 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_100" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_100"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_101">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.025 2.8749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.025 2.8749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_101" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_101"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_102">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.525 2.7249999999999996 0.125"/>
+                        <geometry>
+                            <box size="0.05 0.6 0.25"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.525 2.7249999999999996 0.125"/>
+                        <geometry>
+                            <box size="0.05 0.6 0.25"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_102" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_102"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_103">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.8249999999999997 2.7249999999999996 0.125"/>
+                        <geometry>
+                            <box size="0.05 0.6 0.25"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.8249999999999997 2.7249999999999996 0.125"/>
+                        <geometry>
+                            <box size="0.05 0.6 0.25"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_103" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_103"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_104">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="2.425 2.8749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="2.425 2.8749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_104" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_104"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_105">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="3.025 2.8749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="3.025 2.8749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_105" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_105"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_106">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="3.6249999999999996 2.8749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="3.6249999999999996 2.8749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_106" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_106"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_107">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="4.2250000000000005 2.8749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="4.2250000000000005 2.8749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_107" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_107"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_108">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="5.425 2.8749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="5.425 2.8749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_108" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_108"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_109">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.025 3.175 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.025 3.175 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_109" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_109"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_110">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.775 3.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.775 3.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_110" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_110"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_111">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.075 3.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.075 3.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_111" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_111"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_112">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.3749999999999998 3.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.3749999999999998 3.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_112" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_112"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_113">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.6749999999999998 3.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.6749999999999998 3.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_113" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_113"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_114">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.9749999999999996 3.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.9749999999999996 3.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_114" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_114"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_115">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="2.275 3.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="2.275 3.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_115" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_115"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_116">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="2.5749999999999997 3.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="2.5749999999999997 3.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_116" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_116"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_117">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="2.8749999999999996 3.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="2.8749999999999996 3.025 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_117" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_117"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_118">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="3.6249999999999996 3.175 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="3.6249999999999996 3.175 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_118" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_118"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_119">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="4.825 3.175 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="4.825 3.175 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_119" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_119"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_120">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="5.425 3.175 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="5.425 3.175 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_120" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_120"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_121">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.025 3.4749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.025 3.4749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_121" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_121"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_122">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.9249999999999999 3.3249999999999997 0.125"/>
+                        <geometry>
+                            <box size="0.05 0.6 0.25"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.9249999999999999 3.3249999999999997 0.125"/>
+                        <geometry>
+                            <box size="0.05 0.6 0.25"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_122" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_122"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_123">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="3.6249999999999996 3.4749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="3.6249999999999996 3.4749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_123" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_123"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_124">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="4.825 3.4749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="4.825 3.4749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_124" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_124"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_125">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="5.425 3.4749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="5.425 3.4749999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.05 0.35 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_125" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_125"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_126">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.175 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.175 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_126" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_126"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_127">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.475 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.475 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_127" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_127"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_128">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="0.775 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="0.775 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_128" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_128"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_129">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.075 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.075 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_129" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_129"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_130">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.3749999999999998 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.3749999999999998 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_130" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_130"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_131">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.6749999999999998 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.6749999999999998 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_131" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_131"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_132">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="1.9749999999999996 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="1.9749999999999996 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_132" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_132"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_133">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="2.275 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="2.275 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_133" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_133"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_134">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="2.5749999999999997 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="2.5749999999999997 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_134" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_134"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_135">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="2.8749999999999996 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="2.8749999999999996 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_135" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_135"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_136">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="3.175 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="3.175 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_136" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_136"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_137">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="3.4749999999999996 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="3.4749999999999996 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_137" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_137"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_138">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="3.7749999999999995 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="3.7749999999999995 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_138" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_138"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_139">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="4.075 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="4.075 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_139" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_139"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_140">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="4.375000000000001 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="4.375000000000001 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_140" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_140"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_141">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="4.675000000000001 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="4.675000000000001 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_141" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_141"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_142">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="4.9750000000000005 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="4.9750000000000005 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_142" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_142"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                
+                <link name="link_143">
+                    <visual>
+                        <origin rpy="0 0 0" xyz="5.275 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                        <material name="white">
+                            <color rgba="1 1 1 1"/>
+                        </material>
+                    </visual>
+                    <collision>
+                        <origin rpy="0 0 0" xyz="5.275 3.6249999999999996 0.25"/>
+                        <geometry>
+                            <box size="0.35 0.05 0.5"/>
+                        </geometry>
+                    </collision>
+                </link>
+                <joint name="joint_143" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="link_143"/>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                </joint>
+                </robot>
