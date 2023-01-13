@@ -11,14 +11,14 @@ robot:
   #end of link part
 world:
   robot:
-    type: "kr210l150"
+    type: "ur5"
     position:
-      x: -3
-      y: 3
+      x: .5
+      y: -0.5
       z: .3
     rotation:
-      r: 0
-      p: 0
+      r: 90
+      p: 90
       y: 0
     sensors:
       # - type: "lidar"
@@ -52,32 +52,60 @@ world:
           ray_num_ver: 3
           ray_num_hor: 12
   obstacles:
-    - type: "maze"
+    - type: "table/table"
       position:
         x: 0
         y: 0
         z: 0
       rotation:
         r: 0
-        p: -90
-        y: 0
-      params:
-        width: 6
-        height: 9
-        wall_width: .3
-        wall_height: .5
-        wall_thickness: .05
-        difficulty: .5
-
-        connector_strict: True
-        connector_probability: .1
-        connector_height: .25
-    - type: "cube"
-      position:
-        x: -3
-        y: -3
-        z: 2
-      rotation:
-        r: 1
         p: 0
         y: 0
+    # - type: "maze"
+    #   position:
+    #     x: 0
+    #     y: 0
+    #     z: 0
+    #   rotation:
+    #     r: 0
+    #     p: -90
+    #     y: 0
+    #   params:
+    #     width: 6
+    #     height: 9
+    #     wall_width: .3
+    #     wall_height: .5
+    #     wall_thickness: .05
+    #     difficulty: .5
+    #     connector_strict: True
+    #     connector_probability: .1
+    #     connector_height: .25
+    - type: "human"
+      position:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        r: 0
+        p: 0
+        y: 0
+      params:
+        move:
+          - position:
+              x: -1
+              y: 1
+              z: .9
+          - position:
+              x: -1
+              y: -1
+              z: .9
+          - position:
+              x: 1
+              y: -1
+              z: .9
+          - position:
+              x: 1
+              y: 1
+              z: .9
+
+

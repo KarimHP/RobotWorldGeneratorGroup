@@ -9,6 +9,7 @@ import sys
 def init_pyb():
     physicsClient = p.connect(p.GUI)
     p.setAdditionalSearchPath(pybullet_data.getDataPath())
+
     planeID = p.loadURDF("plane.urdf")
     p.setGravity(0,0,-9.81)
     p.setRealTimeSimulation(0)
@@ -21,7 +22,7 @@ def step(world_generator: WorldGenerator):
         obstacle.step()
     
     p.stepSimulation()
-    time.sleep(1./10.)
+    #time.sleep(1./10.)
 
 if __name__ == "__main__":
     os.chdir(sys.path[0])
