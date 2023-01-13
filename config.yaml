@@ -61,25 +61,25 @@ world:
         r: 0
         p: 0
         y: 0
-    # - type: "maze"
-    #   position:
-    #     x: 0
-    #     y: 0
-    #     z: 0
-    #   rotation:
-    #     r: 0
-    #     p: -90
-    #     y: 0
-    #   params:
-    #     width: 6
-    #     height: 9
-    #     wall_width: .3
-    #     wall_height: .5
-    #     wall_thickness: .05
-    #     difficulty: .5
-    #     connector_strict: True
-    #     connector_probability: .1
-    #     connector_height: .25
+    - type: "maze"
+      position:
+        x: 3
+        y: 0
+        z: 0
+      rotation:
+        r: 0
+        p: -90
+        y: 0
+      params:
+        width: 6
+        height: 9
+        wall_width: .1
+        wall_height: .5
+        wall_thickness: .01
+        difficulty: .5
+        connector_strict: True
+        connector_probability: .1
+        connector_height: .25
     - type: "human"
       position:
         x: 0
@@ -98,7 +98,7 @@ world:
           - position:
               x: -1
               y: -1
-              z: .9
+              z: 1.3
           - position:
               x: 1
               y: -1

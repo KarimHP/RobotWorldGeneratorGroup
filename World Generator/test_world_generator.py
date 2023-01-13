@@ -22,7 +22,7 @@ def step(world_generator: WorldGenerator):
         obstacle.step()
     
     p.stepSimulation()
-    #time.sleep(1./10.)
+    time.sleep(1./100.)
 
 if __name__ == "__main__":
     os.chdir(sys.path[0])
