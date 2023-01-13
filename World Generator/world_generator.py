@@ -9,9 +9,11 @@ import math
 from obstacles.maze.maze_obstacle import MazeObstacle
 from sensors.base import BaseSensor
 from sensors.lidar import LidarSensor
-from obstacles.base import BaseObstacle
-from obstacles.static_object import StaticObject
-from obstacles.moving_object import MovingObject
+from obstacles.base_obstacle import BaseObstacle
+from obstacles.urdf_object.static_object import StaticObject
+from obstacles.urdf_object.moving_object import MovingObject
+from obstacles.human.human_obstacle import HumanObstacle
+from helpers.helpers import getPosition, getRotation
 from robot import Robot
 
 URDF_PATH = "../urdfs/"
@@ -28,36 +30,36 @@ class WorldGenerator:
     def find_urdfs(self, search_name):
         return list(glob.iglob(os.path.join(URDF_PATH, f"**/{search_name}.urdf"), recursive=True))
 
-    def getPosition(self, obj):
-        xyz = obj["position"]
-        return [xyz["x"], xyz["y"], xyz["z"]]
-
-    def getRotation(self, obj):
-        conversion_fac = math.pi / 180
-        rpy = obj["rotation"]
-        print([rpy["r"] * conversion_fac, rpy["p"] * conversion_fac, rpy["y"] * conversion_fac])
-        return p.getQuaternionFromEuler([rpy["r"] * conversion_fac, rpy["p"] * conversion_fac, rpy["y"] * conversion_fac])
 
     def load_robot(self):
         robot = self.config["robot"]
-        self.robot = Robot(self.find_urdfs(robot["type"])[0], self.getPosition(robot), self.getRotation(robot))
+        self.robot = Robot(self.find_urdfs(robot["type"])[0], getPosition(robot), getRotation(robot))
 
     def load_obstacles(self):
         obstacles = self.config["obstacles"]
         for obstacle in obstacles:
-            if obstacle["type"] == "maze":
+            obstacle_name = obstacle["type"]
+            if obstacle_name == "maze":
                 params = obstacle["params"]
-                maze = MazeObstacle(self.getPosition(obstacle), self.getRotation(obstacle), params)
+                maze = MazeObstacle(getPosition(obstacle), getRotation(obstacle), params)
                 self.obstacles.append(maze)
+            elif obstacle_name == "human":
+                self.obstacles.append(HumanObstacle(getPosition(obstacle), getRotation(obstacle), obstacle["params"]))
             else:
-                self.obstacles.append(StaticObject(f"{obstacle['type']}.urdf", self.getPosition(obstacle), self.getRotation(obstacle)))
+                predefined_urdfs = self.find_urdfs(obstacle_name)
+                if len(predefined_urdfs) > 0:
+                    urdf_name = predefined_urdfs[0]
+                else:
+                    urdf_name = f"{obstacle_name}.urdf"
+
+                self.obstacles.append(StaticObject(urdf_name, getPosition(obstacle), getRotation(obstacle)))
 
     def load_sensors(self):
         sensors = self.config["robot"]["sensors"]
         for sensor in sensors:
             params = sensor["params"]
             if sensor["type"] == "lidar":
-                self.sensors.append(LidarSensor(self.robot.id, sensor["link"], self.getPosition(sensor), self.getRotation(sensor), params["ray_min"], params["ray_max"], params["ray_num_ver"], params["ray_num_hor"]))
+                self.sensors.append(LidarSensor(self.robot.id, sensor["link"], getPosition(sensor), getRotation(sensor), params["ray_min"], params["ray_max"], params["ray_num_ver"], params["ray_num_hor"]))
 
 
 
