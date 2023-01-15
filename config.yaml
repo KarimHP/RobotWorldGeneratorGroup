@@ -119,6 +119,16 @@ world:
               x: 2
               y: 2
               z: 1.5
+    - type: "human_static"
+      position:
+        x: 1.6
+        y: 0
+        z: 1.4
+      rotation:
+        r: 0
+        p: 0
+        y: 90
+      scale: 1.5
     - type: "rectangle"
       moving: 1
       steps: 200
