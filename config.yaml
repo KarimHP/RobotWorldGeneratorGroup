@@ -41,7 +41,7 @@ world:
         position:
           x: 0
           y: 0
-          z: .12
+          z: -3
         rotation:
           r: 0
           p: 90
@@ -51,6 +51,17 @@ world:
           ray_max: 2
           ray_num_ver: 3
           ray_num_hor: 12
+  goals:
+    - indicator: "sphere"
+      position:
+        x: 0
+        y: 0
+        z: 1.5
+      rotation:
+        r: 0
+        p: 0
+        y: 0
+      scale: 1.5
   obstacles:
     - type: "table/table"
       position:
@@ -81,16 +92,6 @@ world:
     #    connector_strict: True
     #    connector_probability: .1
     #    connector_height: .25
-    - type: "goal"
-      position:
-        x: 0
-        y: 0
-        z: 1.5
-      rotation:
-        r: 0
-        p: 0
-        y: 0
-      scale: 1.5
     - type: "human"
       position:
         x: 0
@@ -107,19 +108,11 @@ world:
               x: -2
               y: 2
               z: 1.4
-          #- position:
-          #    x: -2
-          #    y: -2
-          #    z: 1.4
-          #- position:
-          #    x: 2
-          #    y: -2
-          #    z: 1.5
           - position:
               x: 2
               y: 2
               z: 1.5
-    - type: "human_static"
+    - type: "human"
       position:
         x: 1.6
         y: 0
@@ -130,16 +123,6 @@ world:
         y: 90
       scale: 1.5
     - type: "rectangle"
-      moving: 1
-      steps: 200
-      start_pos:
-        x: -1.5
-        y: 0.3
-        z: 1.5
-      end_pos:
-        x: -0.5
-        y: 0.3
-        z: 1.5
       position:
         x: -0
         y: -1.2
@@ -149,17 +132,24 @@ world:
         p: 0
         y: 90
       scale: 0.3
+      params:
+        move:
+          - steps: 200
+            position:
+              x: -2
+              y: .2
+              z: 1.4
+          - steps: 100
+            position:
+              x: 2
+              y: .2
+              z: 1.5
+          - steps: 100
+            position:
+              x: 2
+              y: 1.2
+              z: 1.5
     - type: "rectangle"
-      moving: 1
-      steps: 200
-      start_pos:
-        x: -1.5
-        y: -0.3
-        z: 1.5
-      end_pos:
-        x: -0.5
-        y: -0.3
-        z: 1.5
       position:
         x: -0
         y: -1.2
@@ -169,6 +159,18 @@ world:
         p: 0
         y: 90
       scale: 0.3
+      params:
+        move:
+          - steps: 200
+            position:
+              x: -1.5
+              y: -0.3
+              z: 1.5
+          - steps: 200
+            position:
+              x: -0.5
+              y: -0.3
+              z: 1.5
 
 
 

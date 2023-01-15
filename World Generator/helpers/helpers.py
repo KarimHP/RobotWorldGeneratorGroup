@@ -1,6 +1,10 @@
 import pybullet as p
 import math
+import glob
+import os
+import sys
 
+URDF_PATH = "../urdfs/"
 
 def getPosition(obj):
     xyz = obj["position"]
@@ -20,9 +24,21 @@ def getScale(obj):
         scale = 1
     return scale
 
+def findUrdfs(search_name):
+    return list(glob.iglob(os.path.join(URDF_PATH, f"**/{search_name}.urdf"), recursive=True))
+
+def getUrdfPath(name):
+    predefined_urdfs = findUrdfs(name)
+
+    if len(predefined_urdfs) > 0:
+        urdf_name = predefined_urdfs[0]
+    else:
+        urdf_name = f"{name}.urdf"
+    return urdf_name
+    
 
 def isMoving(obj):
-    return "moving" in obj
+    return "params" in obj and "move" in obj["params"]
 
 
 def getMoving(obj):
