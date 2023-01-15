@@ -80,6 +80,8 @@ class MazeUrdf(BaseObstacle):
         f.write(urdf.get_urdf())
         f.close()
 
+        self.solution = m.solutions[0]
+
         return file_name
         #self.id = p.loadURDF(file_name, self.position, self.rotation, useFixedBase=True, globalScaling=self.scale)
 

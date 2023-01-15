@@ -73,25 +73,25 @@ world:
         p: 0
         y: 0
       scale : 2
-    # - type: "maze"
-    #   position:
-    #     x: 3
-    #     y: 0
-    #     z: 0
-    #   rotation:
-    #     r: 0
-    #     p: -90
-    #     y: 0
-    #   params:
-    #     rows: 9
-    #     cols: 6
-    #     element_size: .1
-    #     element_depth: .5
-    #     wall_thickness: .01
-    #     difficulty: .5
-    #     connector_strict: True
-    #     connector_probability: .1
-    #     connector_height: .25
+    - type: "maze"
+      position:
+        x: 3
+        y: 0
+        z: 0
+      rotation:
+        r: 0
+        p: -90
+        y: 0
+      params:
+        rows: 9
+        cols: 6
+        element_size: .1
+        element_depth: .5
+        wall_thickness: .01
+        difficulty: .5
+        connector_strict: True
+        connector_probability: .1
+        connector_height: .25
     - type: "shelf"
       position:
         x: 0
