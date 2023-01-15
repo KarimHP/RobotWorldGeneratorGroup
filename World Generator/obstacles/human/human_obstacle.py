@@ -5,19 +5,21 @@ import pybullet as p
 import math
 import numpy
 
-DONE_THRESHOLD = .5
+DONE_THRESHOLD = 1
+
 
 class HumanObstacle(BaseObstacle):
     timestep = .01
     current_move_point = 0
     move_transforms = []
 
-    def __init__(self, position, rotation, params) -> None:
+    def __init__(self, position, rotation, params, scale=1) -> None:
         super().__init__()
-        self.human = Man(0, partitioned=True)
+        self.human = Man(0, partitioned=True, scaling=scale)
         self.position = position
         self.rotation = rotation
-        self.move_transforms = list(map(lambda x: { "position": getPosition(x) },  params["move"]))
+        self.scale = scale
+        self.move_transforms = list(map(lambda x: {"position": getPosition(x)}, params["move"]))
 
     def vec3_norm(self, vec):
         return math.sqrt((math.pow(vec[0], 2) + math.pow(vec[1], 2) + math.pow(vec[2], 2)))
@@ -58,13 +60,12 @@ class HumanObstacle(BaseObstacle):
         }
         quat = getRotation(rotation)
 
-        #p.addUserDebugLine([last_pos[0],last_pos[1],last_pos[2]], [last_pos[0]+ direction_normalized[0],last_pos[1]+ direction_normalized[1],last_pos[2] + direction_normalized[2]], [1,0,0], 3)
-        #p.addUserDebugLine([target_pos[0],target_pos[1],target_pos[2] - 1], [target_pos[0],target_pos[1],target_pos[2] + 1], [0,1,0], 3)
+        # p.addUserDebugLine([last_pos[0],last_pos[1],last_pos[2]], [last_pos[0]+ direction_normalized[0],last_pos[1]+ direction_normalized[1],last_pos[2] + direction_normalized[2]], [1,0,0], 3)
+        # p.addUserDebugLine([target_pos[0],target_pos[1],target_pos[2] - 1], [target_pos[0],target_pos[1],target_pos[2] + 1], [0,1,0], 3)
 
         if self.get_distance(curr_pos, target_pos) < DONE_THRESHOLD:
             self.current_move_point = (self.current_move_point + 1) % len(self.move_transforms)
             target_pos = self.move_transforms[self.current_move_point]["position"]
             self.human.resetGlobalTransformation([0, 0, 0], [0, 0, 0])
-            
 
         self.human.advance(self.last_pos(), quat)

@@ -13,12 +13,12 @@ world:
   robot:
     type: "ur5"
     position:
-      x: .5
-      y: -0.5
-      z: .3
+      x: 0
+      y: 0.8
+      z: 1.25
     rotation:
-      r: 90
-      p: 90
+      r: 0
+      p: 0
       y: 0
     sensors:
       # - type: "lidar"
@@ -61,25 +61,36 @@ world:
         r: 0
         p: 0
         y: 0
-    - type: "maze"
+      scale : 2
+    #- type: "maze"
+    #  position:
+    #    x: 3
+    #    y: 0
+    #    z: 0
+    #  rotation:
+    #    r: 0
+    #    p: -90
+    #    y: 0
+    #  params:
+    #    width: 6
+    #    height: 9
+    #    wall_width: .1
+    #    wall_height: .5
+    #    wall_thickness: .01
+    #    difficulty: .5
+    #    connector_strict: True
+    #    connector_probability: .1
+    #    connector_height: .25
+    - type: "goal"
       position:
-        x: 3
+        x: 0
         y: 0
-        z: 0
+        z: 1.5
       rotation:
         r: 0
-        p: -90
+        p: 0
         y: 0
-      params:
-        width: 6
-        height: 9
-        wall_width: .1
-        wall_height: .5
-        wall_thickness: .01
-        difficulty: .5
-        connector_strict: True
-        connector_probability: .1
-        connector_height: .25
+      scale: 1.5
     - type: "human"
       position:
         x: 0
@@ -89,23 +100,65 @@ world:
         r: 0
         p: 0
         y: 0
+      scale: 1.5
       params:
         move:
           - position:
-              x: -1
-              y: 1
-              z: .9
+              x: -2
+              y: 2
+              z: 1.4
+          #- position:
+          #    x: -2
+          #    y: -2
+          #    z: 1.4
+          #- position:
+          #    x: 2
+          #    y: -2
+          #    z: 1.5
           - position:
-              x: -1
-              y: -1
-              z: 1.3
-          - position:
-              x: 1
-              y: -1
-              z: .9
-          - position:
-              x: 1
-              y: 1
-              z: .9
+              x: 2
+              y: 2
+              z: 1.5
+    - type: "rectangle"
+      moving: 1
+      steps: 200
+      start_pos:
+        x: -1.5
+        y: 0.3
+        z: 1.5
+      end_pos:
+        x: -0.5
+        y: 0.3
+        z: 1.5
+      position:
+        x: -0
+        y: -1.2
+        z: 1.5
+      rotation:
+        r: 0
+        p: 0
+        y: 90
+      scale: 0.3
+    - type: "rectangle"
+      moving: 1
+      steps: 200
+      start_pos:
+        x: -1.5
+        y: -0.3
+        z: 1.5
+      end_pos:
+        x: -0.5
+        y: -0.3
+        z: 1.5
+      position:
+        x: -0
+        y: -1.2
+        z: 1.5
+      rotation:
+        r: 0
+        p: 0
+        y: 90
+      scale: 0.3
+
 
 

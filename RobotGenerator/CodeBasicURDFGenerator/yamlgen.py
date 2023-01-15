@@ -100,7 +100,9 @@ if __name__ == '__main__':
         urdf_file.write("\n")
 
         colorcounter = colorcounter + 1
-
+    if "joint_list" not in config["robot"]:
+        urdf_file.write("</robot>\n")
+        exit(0)
     joints = config["robot"]["joint_list"]
 
     for joint in joints:

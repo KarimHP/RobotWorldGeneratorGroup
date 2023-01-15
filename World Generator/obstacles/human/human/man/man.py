@@ -11,14 +11,16 @@ class Man(Human):
                  partitioned=False,
                  self_collisions=False,
                  timestep=0.01,
-                 scaling=1.0):
+                 scaling=1.0,
+                 static=False):
         if partitioned:
             self.body_id = p.loadURDF(
                 os.path.join(os.path.dirname(__file__),
                              "man_partitioned.urdf"),
                 flags=p.URDF_MAINTAIN_LINK_ORDER,
                 physicsClientId=pybtPhysicsClient,
-                globalScaling=scaling
+                globalScaling=scaling,
+                useFixedBase=static
             )
         else:
             urdf_load_flags = p.URDF_MAINTAIN_LINK_ORDER
@@ -29,7 +31,8 @@ class Man(Human):
                              "man.urdf"),
                 flags=urdf_load_flags,
                 physicsClientId=pybtPhysicsClient,
-                globalScaling=scaling
+                globalScaling=scaling,
+                useFixedBase=static
             )
 
         super().__init__(
