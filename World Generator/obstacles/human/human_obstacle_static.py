@@ -21,11 +21,8 @@ def getDistanceToRobot(robot, end_effector_id, object_id, joint_id):
 class HumanObstacleStatic(BaseObstacle):
 
     def __init__(self, position, rotation, scale=1, robot_id=1) -> None:
-        super().__init__()
+        super().__init__(position, rotation, scale)
         self.human = Man(0, partitioned=False, scaling=scale, static=True)
-        self.position = position
-        self.rotation = rotation
-        self.scale = scale
         self.human.resetGlobalTransformation(position, p.getEulerFromQuaternion(rotation))
         self.i = 0
         self.robot_id = robot_id

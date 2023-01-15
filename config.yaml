@@ -73,25 +73,49 @@ world:
         p: 0
         y: 0
       scale : 2
-    #- type: "maze"
-    #  position:
-    #    x: 3
-    #    y: 0
-    #    z: 0
-    #  rotation:
-    #    r: 0
-    #    p: -90
-    #    y: 0
-    #  params:
-    #    width: 6
-    #    height: 9
-    #    wall_width: .1
-    #    wall_height: .5
-    #    wall_thickness: .01
-    #    difficulty: .5
-    #    connector_strict: True
-    #    connector_probability: .1
-    #    connector_height: .25
+    # - type: "maze"
+    #   position:
+    #     x: 3
+    #     y: 0
+    #     z: 0
+    #   rotation:
+    #     r: 0
+    #     p: -90
+    #     y: 0
+    #   params:
+    #     rows: 9
+    #     cols: 6
+    #     element_size: .1
+    #     element_depth: .5
+    #     wall_thickness: .01
+    #     difficulty: .5
+    #     connector_strict: True
+    #     connector_probability: .1
+    #     connector_height: .25
+    - type: "shelf"
+      position:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        r: 0
+        p: -90
+        y: 0
+      params:
+        move:
+          - position:
+              x: -2
+              y: 2
+              z: 1.4
+          - position:
+              x: 2
+              y: 2
+              z: 1.5
+        rows: 9
+        cols: 6
+        element_size: 1
+        shelf_depth: 1
+        wall_thickness: .1
     - type: "human"
       position:
         x: 0

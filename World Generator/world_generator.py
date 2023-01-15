@@ -6,10 +6,11 @@ import sys
 import yaml
 import time
 import math
-from obstacles.maze.maze_obstacle import MazeObstacle
 from sensors.base import BaseSensor
 from sensors.lidar import LidarSensor
 from obstacles.base_obstacle import BaseObstacle
+from obstacles.maze.maze_urdf import MazeUrdf
+from obstacles.shelf.shelf_urdf import ShelfUrdf
 from obstacles.urdf_object.static_object import StaticObject
 from obstacles.urdf_object.moving_object import MovingObject
 from obstacles.human.human_obstacle import HumanObstacle
@@ -29,33 +30,40 @@ class WorldGenerator:
             self.config = yaml.safe_load(stream)["world"]
 
 
-
     def load_robot(self):
         robot = self.config["robot"]
         self.robot = Robot(getUrdfPath(robot["type"]), getPosition(robot), getRotation(robot))
 
+    def load_obstacle(self, obstacle):
+        obstacle_name = obstacle["type"]
+        position = getPosition(obstacle)
+        rotation = getRotation(obstacle)
+        scale = getScale(obstacle)
+
+
+        if obstacle_name == "human" and isMoving(obstacle):
+            self.obstacles.append(HumanObstacle(position, rotation, scale, obstacle["params"]))
+        elif obstacle_name == "human" and not isMoving(obstacle):
+            self.obstacles.append(HumanObstacleStatic(position, rotation, scale))
+        else:
+            if obstacle_name == "maze":
+                maze = MazeUrdf(obstacle["params"])
+                urdf_name = maze.generate()
+            elif obstacle_name == "shelf":
+                shelf = ShelfUrdf(obstacle["params"])
+                urdf_name = shelf.generate()
+            else:
+                urdf_name = getUrdfPath(obstacle_name)
+                
+            if not isMoving(obstacle):
+                self.obstacles.append(StaticObject(urdf_name, position, rotation, scale))
+            else:
+                self.obstacles.append(MovingObject(urdf_name, position, rotation, scale, obstacle["params"]["move"]))
+
     def load_obstacles(self):
         obstacles = self.config["obstacles"]
         for obstacle in obstacles:
-            obstacle_name = obstacle["type"]
-            if obstacle_name == "maze":
-                params = obstacle["params"]
-                maze = MazeObstacle(getPosition(obstacle), getRotation(obstacle), params)
-                self.obstacles.append(maze)
-            elif obstacle_name == "human" and isMoving(obstacle):
-                self.obstacles.append(HumanObstacle(getPosition(obstacle), getRotation(obstacle), obstacle["params"],
-                                                    scale=getScale(obstacle)))
-            elif obstacle_name == "human":
-                self.obstacles.append(
-                    HumanObstacleStatic(getPosition(obstacle), getRotation(obstacle),
-                                        scale=getScale(obstacle)))
-            else:
-                urdf_name = getUrdfPath(obstacle_name)
-                if not isMoving(obstacle):
-                    self.obstacles.append(
-                        StaticObject(urdf_name, getPosition(obstacle), getRotation(obstacle), getScale(obstacle)))
-                else:
-                    self.obstacles.append(MovingObject(urdf_name, getPosition(obstacle), getRotation(obstacle), obstacle["params"]["move"], getScale(obstacle)))
+            self.load_obstacle(obstacle)
 
     def load_goals(self):
         goals = self.config["goals"]

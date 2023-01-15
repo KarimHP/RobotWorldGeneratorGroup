@@ -9,7 +9,7 @@ class MovingObject(StaticObject):
     current_idx: int = 0
     move_path: list
 
-    def __init__(self, urdf, position, rotation, move_path, scale=1) -> None:
+    def __init__(self, urdf, position, rotation, scale, move_path) -> None:
         super().__init__(urdf, position, rotation, scale)
         self.move_path = move_path
         self.counter = 0
@@ -22,7 +22,7 @@ class MovingObject(StaticObject):
 
     def step(self):
         current_el = self.move_path[self.current_idx]
-        steps = current_el["steps"]
+        steps = current_el["steps"] if "steps" in current_el else 200
         if self.counter < steps:
             start_pos = getPosition(self.get_last_el())
             end_pos = getPosition(current_el)

@@ -13,12 +13,9 @@ class HumanObstacle(BaseObstacle):
     current_move_point = 0
     move_transforms = []
 
-    def __init__(self, position, rotation, params, scale=1) -> None:
-        super().__init__()
+    def __init__(self, position, rotation, scale, params) -> None:
+        super().__init__(position, rotation, scale)
         self.human = Man(0, partitioned=True, scaling=scale)
-        self.position = position
-        self.rotation = rotation
-        self.scale = scale
         self.move_transforms = list(map(lambda x: {"position": getPosition(x)}, params["move"]))
 
     def vec3_norm(self, vec):
