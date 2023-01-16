@@ -25,8 +25,8 @@ class WorldGenerator:
     sensors: list[BaseSensor] = []
     
 
-    def load_config(self):
-        with open("../config.yaml", "r") as stream:
+    def load_config(self, config_path: str):
+        with open(config_path, "r") as stream:
             self.config = yaml.safe_load(stream)["world"]
 
 
@@ -81,8 +81,8 @@ class WorldGenerator:
                                                 params["ray_min"], params["ray_max"], params["ray_num_ver"],
                                                 params["ray_num_hor"]))
 
-    def __init__(self) -> None:
-        self.load_config()
+    def __init__(self, config_path: str) -> None:
+        self.load_config(config_path)
         self.load_robot()
         self.load_obstacles()
         self.load_sensors()

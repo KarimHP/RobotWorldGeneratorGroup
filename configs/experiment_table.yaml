@@ -1,0 +1,122 @@
+robot:
+  hint: "ToDo for robot generator part"
+  robot_name: "test_robot"
+  # How many Links do you want to create?
+  link_count: "2"
+  #please copy this part depending on the number of links you want to create
+  link_id: "1"
+  link_name: "link1"
+  link_id: "2"
+  link_name: "link2"
+  #end of link part
+world:
+  robot:
+    type: "kr16"
+    position:
+      x: 0
+      y: 0
+      z: 0
+    rotation:
+      r: 0
+      p: 0
+      y: 0
+    sensors:
+      - type: "lidar"
+        link: 6
+        position:
+          x: 0
+          y: 0
+          z: -3
+        rotation:
+          r: 0
+          p: 90
+          y: 0
+        params:
+          ray_min: .02
+          ray_max: 2
+          ray_num_ver: 3
+          ray_num_hor: 12
+  goals:
+    - indicator: "sphere"
+      position:
+        x: 0
+        y: -1.25
+        z: 1.75
+      rotation:
+        r: 0
+        p: 0
+        y: 0
+      scale: 1.5
+  obstacles:
+    - type: "shelf"
+      position:
+        x: -1.25
+        y: -1
+        z: 0
+      rotation:
+        r: 90
+        p: 0
+        y: 0
+      params:
+        rows: 5
+        cols: 5
+        element_size: .5
+        shelf_depth: .5
+        wall_thickness: .01
+    - type: "shelf"
+      position:
+        x: -1.25
+        y: 1.5
+        z: 0
+      rotation:
+        r: 90
+        p: 0
+        y: 0
+      params:
+        rows: 5
+        cols: 5
+        element_size: .5
+        shelf_depth: .5
+        wall_thickness: .01
+    - type: "human"
+      position:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        r: 0
+        p: 0
+        y: 0
+      scale: 1
+      params:
+        move:
+          - position:
+              x: -2.5
+              y: 0.5
+              z: 1.4
+          - position:
+              x: 2.5
+              y: 0.5
+              z: 1.4
+    - type: "human"
+      position:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        r: 0
+        p: 0
+        y: 0
+      scale: 1
+      params:
+        move:
+          - position:
+              x: 2.5
+              y: -0.5
+              z: 1.4
+          - position:
+              x: -2.5
+              y: -0.5
+              z: 1.4
+
+

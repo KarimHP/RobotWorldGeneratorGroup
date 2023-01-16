@@ -4,7 +4,7 @@ import pybullet_data
 import time
 import os
 import sys
-
+import argparse
 
 def init_pyb():
     physicsClient = p.connect(p.GUI)
@@ -29,8 +29,15 @@ def step(world_generator: WorldGenerator):
 if __name__ == "__main__":
     os.chdir(sys.path[0])
 
+    parser = argparse.ArgumentParser(description='World Generator run script for testing')
+
+    parser.add_argument('config', type=str, nargs='?', default="config",
+                    help='A required integer positional argument')
+
+    args = parser.parse_args()
+
     init_pyb()
-    generator = WorldGenerator()
+    generator = WorldGenerator(os.path.join("../configs", f"{args.config}.yaml"))
     robot = generator.robot
 
     while 1:
