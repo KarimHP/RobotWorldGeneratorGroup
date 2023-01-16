@@ -23,7 +23,7 @@ class LidarSensor(BaseSensor):
         new_transform = p.multiplyTransforms(link_state[0], link_state[1], self.pos, self.orn)
         self.current_pos = new_transform[0]
         self.current_orn = new_transform[1]
-        return self._set_lidar_cylinder(render=True)
+        return self._set_lidar_cylinder(render=False)
 
     def quaternion_matrix(self, quaternion):
         """Return homogeneous rotation matrix from quaternion.

@@ -113,9 +113,9 @@ world:
               z: 1.5
         rows: 9
         cols: 6
-        element_size: 1
-        shelf_depth: 1
-        wall_thickness: .1
+        element_size: .2
+        shelf_depth: .5
+        wall_thickness: .01
     - type: "human"
       position:
         x: 0

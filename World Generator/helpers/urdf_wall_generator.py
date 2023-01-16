@@ -1,7 +1,8 @@
 import pybullet as p
 
 class UrdfWallGenerator:
-    segments = []
+    def __init__(self) -> None:
+        self.segments = []
 
     def add_wall(self, w, h, d, pos_x, pos_y, pos_z):
         self.segments.append({
